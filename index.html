@@ -36,7 +36,7 @@
         .content {
             position: absolute;
             width: 100%;
-            top: 40%;
+            top: 85%;
             transform: translate(0, -50%);
             text-align: center;
         }
@@ -55,7 +55,7 @@
 </head>
 <body>
     <div class="content">
-        <h2>桑田，我们已经在一起了</h2>
+        <h2>桑田，with you ~</h2>
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
@@ -63,23 +63,38 @@
 
     <script>
         function timer() {
-            var start = new Date(2020, 11, 17); 
-			var s = ~~(t / 1000 % 60);
+            var start = new Date(2020, 10, 17); 
+            var t = new Date() - start;
+
+			var h = t / 1000 / 60 / 60 % 24;
+			h = h - 22;
+			if (h < 0) {
+				h = h + 24 ;
+			}
+
+            var m = t / 1000 / 60 % 60;
+			m = m - 13;
+			if (m < 0) {
+				m = m + 60 ;
+				h = h - 1;
+			}
+
+            var s = t / 1000 % 60;
+
+
+			h = ~~ h;
+            if (h < 10) {
+                h = "0" + h;
+            }
+			m = ~~ m;
+            if (m < 10) {
+                m = "0" + m;
+            }
+			s = ~~ s;
             if (s < 10) {
                 s = "0" + s;
             }
 
-            var t = new Date() - start;
-            var h = ~~(t / 1000 / 60 / 60 % 24);
-            if (h < 10) {
-                h = "0" + h;
-            }
-            var m = ~~(t / 1000 / 60 % 60);
-            if (m < 10) {
-                m = "0" + m;
-            }
-
-            
             document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
             document.getElementById('h').innerHTML = h;
             document.getElementById('m').innerHTML = m;
