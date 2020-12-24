@@ -59,36 +59,7 @@ var _hmt = _hmt || [];
         <div class="timer">
             <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
         </div>
-    </div>
-
-    <script>
-        function timer() {
-            var start = new Date(2013, 12, 1); // 2015.7.2
-            var t = new Date() - start;
-            var h = ~~(t / 1000 / 60 / 60 % 24);
-            if (h < 10) {
-                h = "0" + h;
-            }
-            var m = ~~(t / 1000 / 60 % 60);
-            if (m < 10) {
-                m = "0" + m;
-            }
-
-            var s = ~~(t / 1000 % 60);
-            if (s < 10) {
-                s = "0" + s;
-            }
-            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
-            document.getElementById('h').innerHTML = h;
-            document.getElementById('m').innerHTML = m;
-            document.getElementById('s').innerHTML = s;
-        }
-        timer();
-        setInterval(timer, 1000);
-    </script>
-
-	<div class="container">
-		<div class="row">
+        		<div class="row">
 			<div class="col-xs-4 col-md-4">
 				<a href="https://wuyouxx.github.io/" class="thumbnail">
 					<img src="img/1.jpg" alt="...">
@@ -139,7 +110,35 @@ var _hmt = _hmt || [];
 				</a>
 			</div>
 		</div>
-	</div>
+    </div>
+
+    <script>
+        function timer() {
+            var start = new Date(2013, 12, 1); // 2015.7.2
+            var t = new Date() - start;
+            var h = ~~(t / 1000 / 60 / 60 % 24);
+            if (h < 10) {
+                h = "0" + h;
+            }
+            var m = ~~(t / 1000 / 60 % 60);
+            if (m < 10) {
+                m = "0" + m;
+            }
+
+            var s = ~~(t / 1000 % 60);
+            if (s < 10) {
+                s = "0" + s;
+            }
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('h').innerHTML = h;
+            document.getElementById('m').innerHTML = m;
+            document.getElementById('s').innerHTML = s;
+        }
+        timer();
+        setInterval(timer, 1000);
+    </script>
+
+
 
 </body>
 </html>
