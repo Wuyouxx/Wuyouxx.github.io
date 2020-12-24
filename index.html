@@ -54,12 +54,6 @@ var _hmt = _hmt || [];
 
 </head>
 <body>
-    <div class="content">
-        <h2>桑田，我们已经在一起了</h2>
-        <div class="timer">
-            <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
-        </div>
-    </div>
 
     <script>
         function timer() {
@@ -80,7 +74,7 @@ var _hmt = _hmt || [];
             }
 
 			var h = ~~((t / 1000 / 60 / 60 % 24) - 22);
-			 var t = new Date() - start;
+			var t = new Date() - start;
 			if (h < 0) {
 				h = h + 24;
 				h = "0" + h;
@@ -91,9 +85,6 @@ var _hmt = _hmt || [];
             }
 
            
-
-
-
             
             document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
             document.getElementById('h').innerHTML = h;
@@ -105,6 +96,13 @@ var _hmt = _hmt || [];
     </script>
 
 	<div class="container">
+	    <div class="content">
+			<h2>桑田，我们已经在一起了</h2>
+			<div class="timer">
+				<b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
+			</div>
+		 </div>
+
 		<div class="row">
 			<div class="col-xs-4 col-md-4">
 				<a href="https://wuyouxx.github.io/" class="thumbnail">
