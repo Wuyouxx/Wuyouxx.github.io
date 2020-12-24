@@ -63,7 +63,7 @@
 
     <script>
         function timer() {
-            var start = new Date(2020, 10, 17); 
+            var start = new Date(2020, 11, 17); 
             var t = new Date() - start;
 
 			var h = t / 1000 / 60 / 60 % 24;
@@ -95,7 +95,7 @@
                 s = "0" + s;
             }
 
-            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+            document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24 + 30);
             document.getElementById('h').innerHTML = h;
             document.getElementById('m').innerHTML = m;
             document.getElementById('s').innerHTML = s;
